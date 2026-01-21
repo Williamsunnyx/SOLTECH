@@ -8,6 +8,43 @@ const observer = new IntersectionObserver(entries => {
   });
 });
 
+/* THEME TOGGLE */
+
+(() => { 
+const toggle = document.getElementById("themeToggle");
+toggle.onclick = () => {
+  document.body.classList.toggle("light");
+  document.body.classList.toggle("dark");
+  toggle.textContent =
+    document.body.classList.contains("dark") ? "🌙" : "☀️";
+};
+  
+})();
+
+/* TEAM SLIDE */
+
+const marqueeTrack = document.querySelector('.ux-team-marquee-track');
+let speed = 40;
+
+document.querySelectorAll('.ux-team-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const dir = btn.dataset.dir;
+
+    speed += dir === 'right' ? -5 : 5;
+    speed = Math.max(15, Math.min(speed, 80));
+
+    marqueeTrack.style.animationDuration = `${speed}s`;
+  });
+});
+
+/* Pause on hover */
+marqueeTrack.addEventListener('mouseenter', () => {
+  marqueeTrack.style.animationPlayState = 'paused';
+});
+
+marqueeTrack.addEventListener('mouseleave', () => {
+  marqueeTrack.style.animationPlayState = 'running';
+});
 
 
 
@@ -74,15 +111,6 @@ document.getElementById("next").onclick = () => {
 document.getElementById("prev").onclick = () => {
   offset += 240;
   slider.style.transform = `translateX(${offset}px)`;
-};
-
-/* THEME TOGGLE */
-const toggle = document.getElementById("themeToggle");
-toggle.onclick = () => {
-  document.body.classList.toggle("light");
-  document.body.classList.toggle("dark");
-  toggle.textContent =
-    document.body.classList.contains("dark") ? "🌙" : "☀️";
 };
 
 
@@ -383,6 +411,7 @@ const observer = new IntersectionObserver(entries => {
 counters.forEach(counter => observer.observe(counter));
 
 const duration = 2000; // 2 seconds
+
 
 })();
 
