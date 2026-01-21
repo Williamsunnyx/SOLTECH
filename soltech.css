@@ -644,8 +644,11 @@ flex-wrap: wrap;
 }
 
 .service-card h3{
-  font-size: 24px;
+  font-size: 1.3rem;
 }
+ .service-card a{
+  font-size: 1rem;
+ }
 
 .services-grid {
   gap: 0.9rem;
@@ -818,7 +821,9 @@ flex-wrap: wrap;
 .pro-visual-zone {
   position: relative;
   top: 130px;
+  left: -60px;
   margin: auto;
+  zoom: 90%;
 }
   .pro-tip-wrap {
     position: static;
@@ -885,6 +890,7 @@ flex-wrap: wrap;
 .pro-flow-zone {
   position: relative;
   width: 420px;
+  left: -50px;
 }
 
 .pro-title {
@@ -1272,7 +1278,7 @@ flex-wrap: wrap;
 
 .big-number{
   font-size:clamp(8rem, 13vw,16rem);
-  top:17%;
+  top:15.50%;
   
 }
 
@@ -1781,9 +1787,9 @@ flex-wrap: wrap;
   top: 20%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 400px;
+  font-size: 450px;
   font-weight: 900;
-  color: rgba(0, 0, 0, 0.089);
+  color: rgba(1, 167, 37, 0.089);
   pointer-events: none;
 }
 

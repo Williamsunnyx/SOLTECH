@@ -77,43 +77,6 @@ setInterval(rotateTestimonials, 3000);
 
 
 
-const workers = [
-  { name: "John Smith", role: "Plumber", price: "$25/hr" },
-  { name: "Mike Daniel", role: "Electrician", price: "$30/hr" },
-  { name: "Peter Kenny", role: "Carpenter", price: "$28/hr" },
-  { name: "Faisal Ibrahim", role: "Home Cleaner", price: "$20/hr" },
-  { name: "Alex Moore", role: "Painter", price: "$22/hr" },
-  { name: "Chris Nolan", role: "Mechanic", price: "$35/hr" }
-];
-
-const slider = document.getElementById("slider");
-
-workers.forEach((w, i) => {
-  const card = document.createElement("div");
-  card.className = "worker-card";
-  card.innerHTML = `
-    <img src="https://i.pravatar.cc/80?img=${i+5}">
-    <h4>${w.name}</h4>
-    <p>${w.role}</p>
-    <strong>${w.price}</strong>
-  `;
-  slider.appendChild(card);
-});
-
-/* SLIDER CONTROLS */
-let offset = 0;
-
-document.getElementById("next").onclick = () => {
-  offset -= 240;
-  slider.style.transform = `translateX(${offset}px)`;
-};
-
-document.getElementById("prev").onclick = () => {
-  offset += 240;
-  slider.style.transform = `translateX(${offset}px)`;
-};
-
-
 
 /* MENU TOGGLE 
     - CLICK TO OPEN/CLOSE
