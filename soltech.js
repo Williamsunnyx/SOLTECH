@@ -165,7 +165,7 @@ const proFlowData = [
     tip: 'Precision engineering turns ideas into build-ready solutions.Every detail is calculated for strength, safety, and long-term performance'
   },
   {
-    img: 'site5.jpg',
+    img: 'Site5.jpg',
     tip: 'Execution brings plans to life with discipline and craftsmanship.\nWe deliver on time, on standard, and with lasting quality you can trust'
   }
 ];
@@ -383,7 +383,6 @@ const observer = new IntersectionObserver(entries => {
 counters.forEach(counter => observer.observe(counter));
 
 const duration = 2000; // 2 seconds
-const step = target / (duration / 16); // 16ms per frame ~60fps
 
 })();
 
