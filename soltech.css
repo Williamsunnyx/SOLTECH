@@ -637,9 +637,10 @@ flex-wrap: wrap;
   }
 
   .service-card {
-    zoom: 80%;
+    zoom: 70%;
     padding: 0.8rem;
     margin: 0;
+    width: 200px;
 }
 
 .service-card h3{
@@ -1271,7 +1272,7 @@ flex-wrap: wrap;
 
 .big-number{
   font-size:clamp(8rem, 13vw,16rem);
-  top:15%;
+  top:17%;
   
 }
 
