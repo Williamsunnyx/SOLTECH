@@ -32,6 +32,11 @@ body {
   font-size: 17px;
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
 button {
   cursor: pointer;
 }
@@ -2369,6 +2374,17 @@ flex-wrap: wrap;
   color: #aaa;
 }
 
+.cf-footer-col a {
+  text-decoration: none;
+  color: #e2e2e2d8;
+
+
+}
+
+.cf-footer-col {
+  color: #e2e2e2d8;
+
+}
 .cf-muted {
   font-size: 0.9rem;
   opacity: 0.75;
@@ -2494,3 +2510,24 @@ flex-wrap: wrap;
   }
 }
 
+
+#toast {
+  position: fixed;
+  top: 40px;
+  right: 40%;
+  background-color: #4caf50; /* green for success */
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s, transform 0.4s;
+  transform: translateY(-20px);
+}
+#toast.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}

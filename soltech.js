@@ -8,6 +8,45 @@ const observer = new IntersectionObserver(entries => {
   });
 });
 
+
+
+/* CONTACT FORM */
+
+
+
+
+
+
+const toast = document.getElementById('toast');
+
+function showToast(message, isSuccess = true) {
+  toast.textContent = message;
+  toast.style.backgroundColor = isSuccess ? '#4caf50' : '#f44336'; // green or red
+  toast.classList.add('show');
+
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3000); // disappears after 3 seconds
+}
+
+
+const form2 = document.getElementById('contact-form-client');
+
+form2.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  emailjs.sendForm('service_hqtqzzb', 'template_5yfq32l', this)
+    .then(() => {
+      showToast("Message sent successfully! ✅", true);
+      form2.reset();
+    }, (err) => {
+      showToast("Failed to send message ❌", false);
+      console.error(err);
+    });
+});
+
+
+
 /* THEME TOGGLE */
 
 (() => { 

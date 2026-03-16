@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rikder – Professional Handyman Services</title>
+  <link rel="icon" sizes="150" href="SolTFavy.png" type="image/png">
+  <title>SolTech – Professional Handyman Services</title>
 
   <link rel="stylesheet" href="soltech.css"/>
   <link rel="stylesheet" href="fontawesome-free-6.0.0-web/css/all.css">
@@ -36,10 +37,10 @@
   </div>
 
   <nav id="navMenu">
-    <a href="#">Task & Delivery</a>
+    <a href="#Taskanddelivery">Task & Delivery</a>
     <a href="#">Locations</a>
-    <a href="#">Services</a>
-    <a href="#">Support</a>
+    <a href="#services">Services</a>
+    <a href="#support">Support</a>
   </nav>
 
   
@@ -48,7 +49,7 @@
   <!--ThEME TOGGLE FOR COLOR BACKGROUND CHANGE-->
   <div class="nav-actions">
     <button id="themeToggle" class="theme-toggle">🌙</button>
-    <button class="btn-primary">Become a Tasker</button>
+    <a href="#support"><button class="btn-primary">Become a Tasker</button></a>
 
   </div>
 
@@ -78,10 +79,10 @@
 
     <div class="search-box">
       <input type="text" placeholder="What service do you need?" />
-      <button>
+      <a href="#services"><button>
         Discover
         <span><i class="fa-solid fa-angle-right"></i></span>
-      </button>
+      </button></a>
     </div>
   </div>
 
@@ -132,7 +133,7 @@
 
 
 <!-- ===== SERVICES SECTION ===== -->
-<section class="services">
+<section class="services" id="services">
 
   <div class="services-grid">
 
@@ -232,7 +233,7 @@
 
 <!-- HOW IT WORKS- ABOUT -->
 
-<section class="pro-work-section">
+<section class="pro-work-section" id="Taskanddelivery">
 
   <div class="pro-work-wrap">
 
@@ -635,7 +636,7 @@
 
   <div class="ux-team-inner">
     <h2 class="ux-team-title">Our Team</h2>
-    <p class="ux-team-subtitle">Explore our success stories and innovative projects</p>
+    <p class="ux-team-subtitle">Explore some the team that makes our success possible</p>
 
     <div class="ux-team-controls">
       <button class="ux-team-btn" data-dir="left"><i class="fa-solid fa-caret-left"></i></button>
@@ -699,28 +700,32 @@
   
   <!-- contact form wrapper -->
 
-  <div class="contact-wrapper">
+  <div class="contact-wrapper" id="support">
 
-    <div class="contact-form">
+    <form class="contact-form"   id="contact-form-client">
       <h2>Drop us a line</h2>
 
       <div class="form-group">
         <label>Full Name</label>
-        <input type="text" placeholder="What's your full name?" />
+        <input type="text" name="from_name" placeholder="What's your full name?" required />
       </div>
 
       <div class="form-group">
         <label>Email address</label>
-        <input type="email" placeholder="you@example.com" />
+        <input type="email" name="from_email" placeholder="you@example.com" required />
       </div>
 
       <div class="form-group">
         <label>Message</label>
-        <textarea placeholder="Write your message for the team here"></textarea>
+        <textarea name="message" placeholder="Write your message for the team here" required></textarea>
       </div>
 
       <button class="submit-btn">Submit</button>
-    </div>
+
+    </form>
+
+ <div id="toast"></div>
+
 
     <div class="contact-visual">
       <h1>We Build Your Dream</h1>
@@ -764,17 +769,18 @@
 
     <div class="cf-footer-col">
       <p class="cf-muted">
-        AI agents to help you win and<br>
+        Development agents to help you win and<br>
         move more projects efficiently.
       </p>
     </div>
 
     <div class="cf-footer-col">
       <h4>Contact Us</h4>
-      <p>
+      <p  >
         123 Industrial Way<br>
         Lisbon, Portugal<br>
-        hello@yourcompany.com
+        <a href="mailto:soltech947@gmail.com">soltech947@gmail.com</a> <br>
+        <a href="tel:+351961454647">(+351) 961 454 647</a>
       </p>
     </div>
 
@@ -833,6 +839,14 @@
 </section>
 
 <script src="soltech.js"></script>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init('uNmf7y9WwVe2td_rX');
+  })();
+</script>
+
 </body>
 </html>
 
